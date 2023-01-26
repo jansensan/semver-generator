@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Semantic Version Generator</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="page-heading">
+        <h1 class="page-title">Semantic Version Generator</h1>
+      </div>
+
+      <form id="semVerForm" class="form">
+        <div class="form-row">
+          <label for="currentVersion">Current Version</label>
+          <input type="text" name="currentVersion" id="currentVersion">
+        </div>
+
+        <div class="form-row form-row-cb">
+          <input type="checkbox" name="patchCB" id="patchCB">
+          <label for="patchCB">I fixed something</label>
+        </div>
+
+        <div class="form-row form-row-cb">
+          <input type="checkbox" name="minorCB" id="minorCB">
+          <label for="minorCB">I added something</label>
+        </div>
+
+        <div class="form-row form-row-cb">
+          <input type="checkbox" name="majorCB" id="majorCB">
+          <label for="majorCB">I removed something</label>
+        </div>
+
+        <button type="submit">Generate Version Number</button>
+
+        <button
+          type="button"
+          class="tertiary-btn"
+          id="resetButton"
+        >Reset</button>
+
+      </form>
+      <div class="output-container" id="output"></div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
