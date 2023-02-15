@@ -98,6 +98,12 @@ function buildVersion() {
   const currentMinor = parseInt(valueArray[1], ten);
   const currentPatch = parseInt(valueArray[2], ten);
 
+  if (currentMajor === 0) {
+    if (majorCB.checked || minorCB.checked) {
+      return [0, currentMinor + 1, 0].join(dot);
+    }
+  }
+
   if (majorCB.checked) {
     return [currentMajor + 1, 0, 0].join(dot);
   }
