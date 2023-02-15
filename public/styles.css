@@ -12,6 +12,15 @@ body {
   margin: 0 auto;
 }
 
+a {
+  color: black;
+  text-decoration-thickness: 1pt;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
 :focus {
   box-shadow:
     0 0 0 2px white,
@@ -142,6 +151,7 @@ button.tertiary-btn {
   background-color: transparent;
   font-weight: normal;
   text-decoration: underline;
+  text-decoration-thickness: 1pt;
   padding: 10px;
 }
 
@@ -161,4 +171,10 @@ button:hover {
   font-weight: bold;
   padding: 20px;
   text-align: center;
+}
+
+
+/* misc */
+.semver-cta {
+  margin-top: 40px;
 }
