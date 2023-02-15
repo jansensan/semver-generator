@@ -11,26 +11,40 @@
         <h1 class="page-title">Semantic Version Generator</h1>
       </div>
 
-      <form id="semVerForm" class="form">
+      <form
+        id="semVerForm"
+        class="form"
+        data-dirty="false"
+        data-valid-version="false"
+        data-valid-checkboxes="false"
+        novalidate
+      >
         <div class="form-row">
           <label for="currentVersion">Current Version</label>
-          <input type="text" name="currentVersion" id="currentVersion">
+          <p class="error-message version-error-message">❌ Format entered is invalid. Ensure to enter a value formatted MAJOR.MINOR.PATCH, e.g. 1.2.3.</p>
+          <input type="text" name="currentVersion" id="currentVersion" required>
         </div>
 
-        <div class="form-row form-row-cb">
-          <input type="checkbox" name="patchCB" id="patchCB">
-          <label for="patchCB">I fixed something</label>
-        </div>
+        <fieldset>
+          <legend>What actions have you taken?</legend>
 
-        <div class="form-row form-row-cb">
-          <input type="checkbox" name="minorCB" id="minorCB">
-          <label for="minorCB">I added something</label>
-        </div>
+          <p class="error-message action-error-message">❌ If you have taken no action, you do not need to use this form.</p>
 
-        <div class="form-row form-row-cb">
-          <input type="checkbox" name="majorCB" id="majorCB">
-          <label for="majorCB">I removed something</label>
-        </div>
+          <div class="form-row form-row-cb">
+            <input type="checkbox" name="patchCB" id="patchCB">
+            <label for="patchCB">I fixed something</label>
+          </div>
+  
+          <div class="form-row form-row-cb">
+            <input type="checkbox" name="minorCB" id="minorCB">
+            <label for="minorCB">I added something</label>
+          </div>
+  
+          <div class="form-row form-row-cb">
+            <input type="checkbox" name="majorCB" id="majorCB">
+            <label for="majorCB">I removed something</label>
+          </div>
+        </fieldset>
 
         <button type="submit">Generate Version Number</button>
 
@@ -43,6 +57,7 @@
       </form>
       <div class="output-container" id="output"></div>
     </div>
+
     <script src="main.js"></script>
   </body>
 </html>

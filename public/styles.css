@@ -75,8 +75,56 @@ body {
 .form-row-cb label {
   display: inline-block;
   cursor: pointer;
+  font-weight: normal;
 }
 
+fieldset {
+  padding: 20px 10px;
+  border: 1px solid black;
+  margin-bottom: 20px;
+}
+
+fieldset .form-row-cb:last-of-type {
+  margin-bottom: 0;
+}
+
+fieldset legend {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+
+/* invalid form */
+.error-message {
+  background-color: #FDF2F3;
+  color: #cc0000;
+  display: none;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 18px;
+  margin: 5px 0;
+  padding: 5px;
+}
+
+.form[data-dirty="true"][data-valid-version="false"] .version-error-message,
+.form[data-dirty="true"][data-valid-checkboxes="false"] .action-error-message {
+  display: block;
+}
+
+.form[data-dirty="true"][data-valid-version="false"] input {
+  color: #cc0000;
+  border-color: #cc0000;
+  background-color: #FDF2F3;
+}
+
+.form[data-dirty="true"][data-valid-checkboxes="false"] fieldset {
+  color: #cc0000;
+  border-color: #cc0000;
+  background-color: #FDF2F3;
+}
+
+
+/* ui */
 button {
   background-color: #FFCB05;
   border: 0;
@@ -104,8 +152,6 @@ button:hover {
 
 /* output */
 .output-container {
-  width: 600px;
-  margin-left: -100px;
   margin-top: 50px;
 }
 
@@ -114,4 +160,5 @@ button:hover {
   border: 2px solid lightgrey;
   font-weight: bold;
   padding: 20px;
+  text-align: center;
 }
