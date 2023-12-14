@@ -1,8 +1,10 @@
+html {
+  background: transparent;
+}
+
 body {
-  background-color: white;
-  color: black;
-  font-family: Arial, Helvetica, sans-serif;
   padding: 50px;
+  background: #f8f8f8;
 }
 
 
@@ -10,22 +12,6 @@ body {
 .container {
   width: 400px;
   margin: 0 auto;
-}
-
-a {
-  color: black;
-  text-decoration-thickness: 1pt;
-}
-
-a:hover {
-  text-decoration: none;
-}
-
-:focus {
-  box-shadow:
-    0 0 0 2px white,
-    0 0 0 4px green;
-  outline: none;
 }
 
 
@@ -87,6 +73,14 @@ a:hover {
   font-weight: normal;
 }
 
+.form-row-cb:focus-within {
+  box-shadow: 0 0 0 2pt white, 0 0 0 4pt #3755ce;
+  outline: 0;
+}
+.form-row-cb:focus-within::-moz-focus-inner {
+  border: 0;
+}
+
 fieldset {
   padding: 20px 10px;
   border: 1px solid black;
@@ -134,29 +128,32 @@ fieldset legend {
 
 
 /* ui */
-button {
-  background-color: #FFCB05;
-  border: 0;
+.submit-btn { 
+  width: fit-content;
+}
+
+button.btn-tertiary {
   cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
-  padding: 10px 35px;
-}
-
-button:hover {
-  background-color: #FAE021;
-}
-
-button.tertiary-btn {
   background-color: transparent;
+  padding: 10px;
+  border: 0;
+
+  font-size: 16px;
   font-weight: normal;
   text-decoration: underline;
   text-decoration-thickness: 1pt;
-  padding: 10px;
 }
 
-button:hover {
+button.btn-tertiary:hover {
   text-decoration: none;
+}
+
+button.btn-tertiary:focus-within {
+  box-shadow: 0 0 0 2pt white, 0 0 0 4pt #3755ce;
+  outline: 0;
+}
+button.btn-tertiary:focus-within::-moz-focus-inner {
+  border: 0;
 }
 
 

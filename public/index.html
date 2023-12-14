@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>Semantic Version Generator</title>
+    <link rel="stylesheet" href="https://assets.jansensan.net/styles/jansensan-v2.css">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -47,18 +48,21 @@
           </div>
         </fieldset>
 
-        <button type="submit">Generate Version Number</button>
+        <button
+          class="btn-primary submit-btn"
+          type="submit"
+        >Generate Version Number</button>
 
         <button
           type="button"
-          class="tertiary-btn"
+          class="btn-tertiary"
           id="resetButton"
         >Reset</button>
-
       </form>
+
       <div class="output-container" id="output"></div>
 
-      <p class="semver-cta"><a href="https://semver.org/">Read about Semantic Versioning</a></p>
+      <p class="semver-cta"><a class="cta" href="https://semver.org/">Read about Semantic Versioning</a></p>
     </div>
 
     <script src="main.js"></script>
